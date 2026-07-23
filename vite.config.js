@@ -3,16 +3,15 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/Plantationservices.ai/', // IMPORTANT
+
   server: {
     port: 3000,
     open: true
   },
+
   build: {
     outDir: 'dist',
-    sourcemap: false,
-    minify: 'terser'
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom']
+    sourcemap: false
   }
 })
